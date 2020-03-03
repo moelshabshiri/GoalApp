@@ -10,7 +10,8 @@ export default function App() {
 
 
   const addGoalHandler = Goaltitle => {
-    console.log(Goaltitle);
+    if(Goaltitle.length===0)
+    return;
     setcourseGoals(currentGoals => [...currentGoals, {key: Math.random().toString(), value: Goaltitle}]);
     setIsAddMode(false);
   };
